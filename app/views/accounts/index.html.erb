@@ -1,0 +1,17 @@
+<h1> All Accounts</h1>
+<a href="/accounts/new">New Account</a>
+<% @accounts.each do |account| %>
+
+	<div>
+	  Account Name : <%= account.holder_name %>
+	  <br>
+	  Account Email : <%= account.address %>
+	  <br>
+	  Account No : <%= account.mobile %>    
+	  <br>
+	  Account Address : <%= account.balance %>
+	  <br>
+	  <a href="/accounts/<%= account.id %>/edit">Edit Account</a>
+	</div>
+	<hr>
+<% end %>

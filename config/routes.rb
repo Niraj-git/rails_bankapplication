@@ -2,7 +2,23 @@ Rails.application.routes.draw do
   get 'home/index'
   get 'home/dashboard'
   get 'home/niraj'
+  get 'other/test_action'
+  get 'manual/manual'
   
+  get 'accounts/index'
+  get 'accounts/new'
+  post 'accounts/create'
+  get 'accounts/:id/edit' => "accounts#edit"
+  post 'accounts/update'
+
+  get 'persons/new'
+  post 'persons/create'
+  get 'persons/index'  
+  get 'persons/:id/edit' => "persons#edit"
+  post 'persons/update'
+  get 'persons/:id/destroy' => "persons#destroy"
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
