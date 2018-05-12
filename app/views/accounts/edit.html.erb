@@ -1,0 +1,23 @@
+<form action="/accounts/update" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <input type="hidden" name="id" value="<%= @account.id %>">
+  <div>
+    <label for="name">Name :</label>
+    <input type="text" id="name" name="holder_name" value="<%= @account.holder_name %>">
+    <br>
+    <label for="address">Address :</label>
+    <input type="textarea" id="name" name="address" value="<%= @account.address %>">
+    <br>
+    <label for="contact">Contact no :</label>
+    <input type="text" id="name" name="mobile" value="<%= @account.mobile %>">
+    <br>
+    
+  </div>
+
+  <div class="button">
+    <button type="submit">
+      Submit
+    </button>
+  </div>
+
+</form>

@@ -1,1 +1,29 @@
 this get request comes from route > controller [home] > view[home]
+
+<form action="/home/niraj" method="get">
+  <div>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="user_name">
+    <br>
+    <label for="name">Address:</label>
+    <input type="textarea" id="name" name="address">
+    <br>
+    <label for="name">Contact no:</label>
+    <input type="text" id="name" name="contact">
+    <br>
+  </div>
+
+  <div class="button">
+    <button type="submit">
+      Submit
+    </button>
+  </div>
+
+</form>
+<div>
+  Your Name is : <%= @name %>
+  <br>
+  Your Address is : <%= @addr %>
+  <br>
+  Your Contact No is : <%= @cont %>
+</div>
