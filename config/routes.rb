@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :transactions
   get 'home/index'
   get 'home/dashboard'
   get 'home/niraj'

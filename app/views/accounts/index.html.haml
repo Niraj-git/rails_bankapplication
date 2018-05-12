@@ -1,0 +1,11 @@
+%h1 All Accounts
+%a{href: '/accounts/new'} New Account
+- @accounts.each do |account|
+  %div
+    Account Name : #{account.holder_name}
+    %br
+    Account Email : #{account.address}
+    %br
+    Account No : #{account.mobile}
+    %a{href: "/accounts/#{account.id}/edit"} Edit Account
+  %hr
