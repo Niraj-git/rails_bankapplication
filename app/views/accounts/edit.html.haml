@@ -1,0 +1,16 @@
+%form{:action => "/accounts/update", :method => "post"}
+  %input{:name => "authenticity_token", :type => "hidden", :value => form_authenticity_token}/
+  %input{:name => "id", :type => "hidden", :value => "#{@account.id}"}/
+  %div
+    %label{:for => "name"} Name :
+    %input#name{:name => "holder_name", :type => "text", :value => "#{@account.holder_name}"}/
+    %br/
+    %label{:for => "address"} Address :
+    %input#name{:name => "address", :type => "textarea", :value => "#{@account.address}"}/
+    %br/
+    %label{:for => "contact"} Contact no :
+    %input#name{:name => "mobile", :type => "text", :value => "#{@account.mobile}"}/
+    %br/
+  .button
+    %button{:type => "submit"}
+      Submit
