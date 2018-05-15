@@ -1,0 +1,22 @@
+%p#notice= notice
+%h1 Listing Transactions
+%table
+  %thead
+    %tr
+      %th Amount
+      %th Account
+      %th Trans type
+      %th User
+      %th{:colspan => "3"}
+  %tbody
+    - @transactions.each do |transaction|
+      %tr
+        %td= transaction.amount
+        %td= transaction.account_id
+        %td= transaction.trans_type
+        %td= transaction.user_id
+        %td= link_to 'Show', transaction
+        %td= link_to 'Edit', edit_transaction_path(transaction)
+        %td= link_to 'Destroy', transaction, method: :delete, data: { confirm: 'Are you sure?' }
+%br/
+= link_to 'New Transaction', new_transaction_path
