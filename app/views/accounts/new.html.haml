@@ -1,0 +1,15 @@
+%form{:action => "/accounts/create", :method => "post"}
+  %input{:name => "authenticity_token", :type => "hidden", :value => form_authenticity_token}/
+  %div
+    %label{:for => "name"} Name :
+    %input#name{:name => "holder_name", :type => "text"}/
+    %br/
+    %label{:for => "address"} Address :
+    %input#name{:name => "address", :type => "textarea"}/
+    %br/
+    %label{:for => "contact"} Contact no :
+    %input#name{:name => "mobile", :type => "text"}/
+    %br/
+  .button
+    %button{:type => "submit"}
+      Submit

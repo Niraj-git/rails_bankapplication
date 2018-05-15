@@ -1,0 +1,21 @@
+this get request comes from route &gt; controller [home] &gt; view[home]
+%form{:action => "/home/niraj", :method => "get"}
+  %div
+    %label{:for => "name"} Name:
+    %input#name{:name => "user_name", :type => "text"}/
+    %br/
+    %label{:for => "name"} Address:
+    %input#name{:name => "address", :type => "textarea"}/
+    %br/
+    %label{:for => "name"} Contact no:
+    %input#name{:name => "contact", :type => "text"}/
+    %br/
+  .button
+    %button{:type => "submit"}
+      Submit
+%div
+  Your Name is : #{@name}
+  %br/
+  Your Address is : #{@addr}
+  %br/
+  Your Contact No is : #{@cont}
